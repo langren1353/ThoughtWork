@@ -13,6 +13,7 @@ module.exports = function main(miles, stopTime) {
     return price;
 };
 function CountPrice(miles, stopTime){
+
     var price = startPrice;
     if(miles < toMile){
         // 8公里以内
@@ -28,5 +29,5 @@ function CountPrice(miles, stopTime){
         price += 0.8*(toMile-upMile) + (miles-toMile)*pricePerMile_BIG;
     }
     // 加上停顿的时间
-    price += stopWaitPrice*stopTime;
+    return price + stopWaitPrice*stopTime;
 }
